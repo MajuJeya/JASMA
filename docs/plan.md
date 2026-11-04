@@ -34,7 +34,7 @@ production service would, and is covered by tests.
 
 ---
 
-## Day 2 — Dockerise
+## Day 2 — Dockerise *(done)*
 
 **Goal:** the same app running inside a container, built from a small,
 reproducible image.

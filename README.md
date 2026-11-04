@@ -5,8 +5,9 @@ using Terraform, Docker, Kubernetes (EKS) and GitHub Actions.
 
 ## Status
 
-**Day 1** — local FastAPI app with CRUD, health/readiness probes, structured
-logging and pytest coverage.
+**Day 2** — containerised with a multi-stage `python:3.12-slim` Dockerfile,
+running as non-root `appuser` (UID 10001) on port 8000. Final image is ~57 MB
+of app content on top of the slim base.
 
 ## Local development
 
@@ -29,13 +30,22 @@ curl -s localhost:8000/tasks
 
 API docs are auto-generated at `http://localhost:8000/docs`.
 
+## Run in Docker
+
+```bash
+docker build -t jasma:dev .
+docker run --rm -p 8000:8000 --name jasma jasma:dev
+```
+
+Then `curl localhost:8000/healthz` from another terminal.
+
 ## Roadmap
 
 See [`docs/plan.md`](docs/plan.md) for the full per-day breakdown (goals,
 deliverables, done-criteria, cost).
 
 - [x] Day 1 — FastAPI + pytest
-- [ ] Day 2 — Dockerise
+- [x] Day 2 — Dockerise
 - [ ] Day 3 — GitHub Actions CI
 - [ ] Day 4 — Local Kubernetes (kind)
 - [ ] Day 5 — Terraform hello-world
