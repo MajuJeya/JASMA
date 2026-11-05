@@ -16,6 +16,7 @@ client = TestClient(app)
 
 def test_healthz():
     r = client.get("/healthz")
+    assert False, "deliberate CI red-test demo"
     assert r.status_code == 200
     assert r.json() == {"status": "ok"}
 
