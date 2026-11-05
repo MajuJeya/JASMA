@@ -1,13 +1,15 @@
 # JASMA — Cloud-Native Task Management Platform
 
+[![CI](https://github.com/MajuJeya/JASMA/actions/workflows/ci.yml/badge.svg)](https://github.com/MajuJeya/JASMA/actions/workflows/ci.yml)
+
 A learning project: a Python task-management REST API, built end-to-end on AWS
 using Terraform, Docker, Kubernetes (EKS) and GitHub Actions.
 
 ## Status
 
-**Day 2** — containerised with a multi-stage `python:3.12-slim` Dockerfile,
-running as non-root `appuser` (UID 10001) on port 8000. Final image is ~57 MB
-of app content on top of the slim base.
+**Day 3** — containerised and gated by GitHub Actions CI: `pytest` + `docker build`
+run on every push and PR to `main`. Previous: multi-stage `python:3.12-slim`
+Dockerfile, running as non-root `appuser` (UID 10001) on port 8000.
 
 ## Local development
 
