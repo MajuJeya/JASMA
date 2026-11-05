@@ -48,7 +48,7 @@ deliverables, done-criteria, cost).
 
 - [x] Day 1 — FastAPI + pytest
 - [x] Day 2 — Dockerise
-- [ ] Day 3 — GitHub Actions CI
+- [x] Day 3 — GitHub Actions CI
 - [ ] Day 4 — Local Kubernetes (kind)
 - [ ] Day 5 — Terraform hello-world
 - [ ] Day 6–7 — AWS infra (VPC, ECR, IAM, EKS) via Terraform

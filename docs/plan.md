@@ -52,7 +52,7 @@ reproducible image.
 
 ---
 
-## Day 3 — GitHub Actions CI
+## Day 3 — GitHub Actions CI *(done)*
 
 **Goal:** every push runs tests and builds the image.
 
